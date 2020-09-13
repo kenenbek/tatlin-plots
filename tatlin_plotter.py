@@ -24,7 +24,7 @@ def preprocess_history(history):
 
 def _subplotter(w_data_old, w_data_new, r_data_old, r_data_new, name):
     fig, ax_list = plt.subplots(2, 2, figsize=(15,6))
-    fig.style
+    # fig.style
     
     ax_list[0, 0].plot(w_data_old, lw=3, c='b')
     ax_list[0, 1].plot(w_data_new, lw=3, c='r')
@@ -53,7 +53,7 @@ def plot_history(w_history_old, w_history_new, r_history_old, r_history_new):
     
         _subplotter(w_data_old, w_data_new, r_data_old, r_data_new, name)
     
-    return 
+    # return 
     storage_states = list(w_history_old[0]['storage_state'].keys())
     for storage_state in storage_states:
         w_statistics_old = [h['storage_state'][storage_state] for h in w_history_old]
